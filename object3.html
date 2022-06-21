@@ -1,0 +1,33 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>this object oriented example</h1>
+        <input type="text" id="text1" placeholder="name">
+        <input type="text" id="text2" placeholder="marks">
+        <button id="btn1" onclick="a2()">click me</button>
+        <p id="p1"></p>
+
+        <script>
+            var i=0;
+        function a2()
+        {
+           
+            function student(f,m)
+            {
+                this.firstName=f;
+                this.marks=m;
+            }
+            st=[];
+            var x = document.getElementById("text1").value;
+            var y = document.getElementById("text2").value;
+            st[i]=new student(x,y);
+            for(k=0; k<st.length; k++)
+            {
+                document.getElementById("p1").innerHTML +=st[k].firstName+","+st[k].marks+"<br>";
+            }
+        }
+        </script>
+    </body>
+</html>
