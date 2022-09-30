@@ -1,0 +1,30 @@
+import React from "react"
+import { useRef,useState } from "react"
+export default function UserrevString(){
+    var str=useRef(null)
+    
+    var [revstr,setRevstr]=useState(" ")
+var res;
+   
+  function Newfun(event){
+    var a=str.current.value;
+    var revers=" "
+
+ for(var i=a.length-1;i>=0;i--){
+        revers=revers+a[i]
+     res=revers;
+    
+    }
+    setRevstr(res)
+    event.preventDefault()
+}
+return(<div>
+    <form onSubmit={Newfun}>
+        <input type="text" ref={str} placeholder="enter any string" /><br />
+        <input type="submit" value="click" />
+        <p>{revstr}</p>
+
+    </form>
+</div>)
+
+}
